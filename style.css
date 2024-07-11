@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+:root{
+    --bg-color: #252526;
+    --bg-color-card: #3e3e42;
+    --bg-color-column: #2d2d30;
+    --font-color: #f2f2f2;
+    --font-color-h1: #007acc;
+    --font-color-title: ;
+    --border-color-card: #5b5b5b;
+    --color-column-highlight: #777777;
+    
+    
+    
+    /* Light Color */
+    --font-light-color: #6b778c;
+    --font-light-color-h1: #182b4d;
+    --font-light-color-column: #f4f5f7;
+    --font-light-color-title: #4d5c76;
+    --border-color-light-card: #dfe1e6;
+    --light-color-column-highlight: #deebff;
+}
+
+body{
+    background-color: var(--bg-color);
+}
+
+main{
+    padding: 30px;
+    user-select: none; /* Essa propriedade não permite selecionar nenhum elemento*/
+}
+
+header > span{
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--font-color);
+    letter-spacing: 0.02rem;
+}
+header > h1{
+    color: var(--font-color-h1);
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 5px;
+}
+.columns{
+    display: flex;
+    gap: 15px;
+    margin-top: 50px;
+}
+.column{
+    width: 100%;
+    background-color: var(--bg-color-column);
+    border-radius: 8px;
+    height: 100dvh;
+
+}
+.column-title{
+    color: var(--font-color);
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin: 20px;
+}
+.column-cards{
+    padding: 4px;
+    height: 100%;
+    border-radius: 5px;
+}
+.card{
+    max-width:300px;
+    width: 100%;
+    min-height: 70px;
+    background-color: var(--bg-color-card);
+    border-radius: 5px;
+    border: 1px solid var(--border-color-card);
+    box-shadow: 0 2px 2px var(--border-color-card);
+    padding: 12px 14px; 
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: var(--font-color);
+}
+.card img{
+    position: absolute;
+    right: 0;
+    width: 20px;
+}
+
+.card:hover,
+.card:focus{
+    border: 1px solid inset var(--border-color-card);
+    box-shadow: 0 2px 2px inset var(--border-color-card);
+}
+.column-highlight{
+    background-color: var(--color-column-highlight);
+    border-radius: 5px;
+    border: 2px solid var(--border-color-card);
+}
